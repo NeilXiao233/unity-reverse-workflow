@@ -8,7 +8,7 @@
 - 提取图片 / Sprite / Texture2D / SpriteAtlas
 - 提取音效 / BGM / AudioClip
 - 提取关卡 / 剧情文本 / 配置 / TextAsset
-- 分析 sharedassets / resources.assets / AssetBundle / bundle
+- 分析 sharedassets / resources.assets / AssetBundle / bundle / AssetRipper 导出层
 - 分析 `global-metadata.dat` / Managed 程序集
 
 ## 核心方法

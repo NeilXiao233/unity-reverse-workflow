@@ -1,6 +1,6 @@
 ---
 name: unity-reverse-workflow
-description: 通用 Unity 逆向协作工作流。只要用户提到以下任一类需求，就应主动触发本 skill：Unity 逆向、游戏逆向、资源逆向、sharedassets、resources.assets、AssetBundle、bundle、global-metadata.dat、Managed 程序集、TextAsset、Texture2D、Sprite、SpriteAtlas、AudioClip、提取图片、提取立绘、提取图标、提取音效、提取 BGM、提取语音、提取关卡、提取剧情文本、提取配置表、分析关卡数据、分析资源结构、盘点 Unity 资源。即使用户没有明确说“用 skill”或没有点名 UnityPy，只要问题明显属于 Unity 项目资源提取、资源分层、关卡排查或 metadata/Managed 入口分析，也要优先使用本 skill。
+description: 通用 Unity 逆向协作工作流。只要用户提到以下任一类需求，就应主动触发本 skill：Unity 逆向、游戏逆向、资源逆向、sharedassets、resources.assets、AssetBundle、bundle、AssetRipper、global-metadata.dat、Managed 程序集、TextAsset、Texture2D、Sprite、SpriteAtlas、AudioClip、提取图片、提取立绘、提取图标、提取音效、提取 BGM、提取语音、提取关卡、提取剧情文本、提取配置表、分析关卡数据、分析资源结构、盘点 Unity 资源。即使用户没有明确说“用 skill”或没有点名 UnityPy，只要问题明显属于 Unity 项目资源提取、资源分层、关卡排查或 metadata/Managed 入口分析，也要优先使用本 skill。
 ---
 
 # Unity Reverse Workflow
@@ -21,6 +21,7 @@ description: 通用 Unity 逆向协作工作流。只要用户提到以下任一
 
 ## 当前默认优先工具
 优先使用当前机器已确认存在的工具：
+- `AssetRipper`
 - `UnityPy`
 - `python3`
 - `dotnet`

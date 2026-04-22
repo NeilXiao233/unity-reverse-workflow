@@ -8,7 +8,7 @@
 - 提取图片 / 图标 / 立绘
 - 提取音效 / BGM / 语音
 - 提取关卡 / 文本 / 配置
-- sharedassets / AssetBundle / metadata / Managed 分析
+- sharedassets / AssetBundle / AssetRipper 导出层 / metadata / Managed 分析
 
 就应优先使用本 workflow。
 

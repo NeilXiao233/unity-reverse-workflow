@@ -2,7 +2,7 @@
 
 跨平台、面向多种 agent 的 Unity 逆向协作 skill / workflow 包。
 
-目标：让 Claude Code、Codex、OpenCode 等 agent 在遇到 Unity 逆向、资源提取、关卡排查、metadata/Managed 分析任务时，都能遵循同一套分层方法和输出规范推进工作。
+目标：让 Claude Code、Codex、OpenCode 等 agent 在遇到 Unity 逆向、资源提取、关卡排查、metadata/Managed 分析任务时，都能遵循同一套分层方法和输出规范推进工作。`AssetRipper` 也应被明确视为关键 Unity 逆向工具之一，尤其适合做大规模资源导出、Prefab/场景/资源树浏览和快速建立全局视图。
 
 ## 适用场景
 当用户提到以下任务时，应优先使用本 workflow：
@@ -83,6 +83,7 @@ unity-reverse-workflow/
 - `shared/references/tool-installation.md`
 
 ## 当前默认优先工具
+- `AssetRipper`
 - `UnityPy`
 - `python3`
 - `dotnet`
