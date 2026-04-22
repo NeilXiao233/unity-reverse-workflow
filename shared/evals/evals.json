@@ -1,0 +1,35 @@
+{
+  "skill_name": "unity-reverse-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我先盘点这个 Unity 项目里最值得逆向的资源层，重点看看图片、音效和关卡数据分别可能在哪些文件里。不要直接全量导出，先给我一轮分层判断和下一步建议。",
+      "expected_output": "应该主动进入 Unity 逆向分层盘点流程，区分容器层、对象层、语义层和桥接层；优先说明 sharedassets、bundle、TextAsset、Texture2D、AudioClip、Managed、global-metadata.dat 这几类边界；不要直接假设具体项目结构。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我现在只想提取这个 Unity 游戏里的图片资源，尤其是 UI 图标和立绘。请先告诉我应该先检查哪些对象类型、怎么做抽样验证，再决定是否批量导出。",
+      "expected_output": "应该优先聚焦 Texture2D、Sprite、SpriteAtlas，强调先枚举对象类型、再抽样导出、确认尺寸/透明通道/命名，再决定批量导出；不要直接承诺全量导出成功。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "帮我看看这个 Unity 包里能不能提取出音效和 BGM。先不要假设工具一定能完整导出，先说清楚检查路径、抽样策略、失败时应该怎么记录。",
+      "expected_output": "应该优先检查 AudioClip，并说明先抽样导出、确认可播放性、再决定批量导出；如果失败，应记录来源文件、对象名和失败现象，明确失败不等于资源不存在。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我想找 Unity 游戏里的关卡数据、剧情文本或者配置表。请给我一个通用排查框架，重点说明哪些只是辅助层，哪些才可能是真正的关卡桥接层。",
+      "expected_output": "应该把关卡相关资源拆成布局层、正文层、展示层、系统层、引用桥层，并强调展示层/系统层/文本块不能自动升格为闭环；输出应以 bridge/key 缺口为中心。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "资源层我已经看过一轮了，现在想从 Managed 和 global-metadata.dat 继续找关卡对象桥。你应该怎么推进，哪些命中只能算入口发现，哪些才算真正前进？",
+      "expected_output": "应该把 Managed 和 metadata 视为类名/字段名/系统名入口发现层，优先找 level/stage/story/clue/template/config 等类字段，并明确字符串命中本身不是最终绑定证据。",
+      "files": []
+    }
+  ]
+}
